@@ -19,30 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const CandidateFilterService = require('./services/CandidateFilter.service');
-
-async function getCandidatesByFilter(filter) {
-  try {
-    const candidates = await CandidateFilterService.getCandidates(filter);
-    return candidates;
-  } catch (error) {
-    console.error('Error getting candidates:', error);
-    throw error;
-  }
-}
-
-var filter = {
-  "status": "success",
-  "filter": {
-    "skill": [
-      "PHP"
-    ],
-    "english": 5,
-    "level": "Junior"
-  }
-}
-getCandidatesByFilter(filter);
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/test', apiTestRouter)
