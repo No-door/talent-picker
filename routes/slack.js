@@ -26,9 +26,17 @@ app.message(async ({message, say}) => {
             })
 
             return;
+        } else if (result.status === 'failed') {
+            await say({
+                text: `⚠️<@${message.user}>`+result.message,
+                thread_ts: message.ts
+            })
+
+            return;
         }
 
         const employees = await candidateFilterService.getCandidates(result);
+        console.log('employees',employees)
 
         await say({
             thread_ts: message.ts,
@@ -55,7 +63,7 @@ app.message(async ({message, say}) => {
         const filterKeys = result.filter;
         if (Object.keys(filterKeys).length <= 3) {
             await say({
-                text: 'Do you want to add more criteria?',
+                text: 'Do you want to add/update your requirements?',
                 thread_ts: message.ts,
             })
         }

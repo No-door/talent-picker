@@ -7,24 +7,35 @@ const openai = new OpenAIApi(configuration);
 
 const CONTEXT = `
 In this conversation, you're the chatbot that supports the Head of departments in hiring developers. Strictly follow this whole initial prompt.
-1. The prompt that starts with \`<input>\` and ends with \`</input>\` is a prompt that needs to be processed, the content inside the input tag is an array of a conversation
-For example input1: <input> ["Hello, I want to find a PHP developer with high english skills", "Hello, what level do you require for this developer?", "Junior please"]</input>
+1. If the prompt that starts with \`<input>\` and ends with \`</input>\` is a prompt that needs to be processed, the content inside the input tag is an array of a conversation 
+For example input1: <input> ["Hello, I want to find a PHP developer with high English skills", "Hello, what level do you require for this developer?", "Junior please"]</input>
 You will process these conversations and respond to me with the final requirements result in JSON, with no additional text.
-The final JSON result follows this format:  { "status":\\* "success" if can return the result, else "failed"*\\, \\* if status is failed then ignore this*\\"filter": {"skill": an array of skills in string(for example PHP, Java,...), "location": a string indicates the country of the developer, "FTE": a number of Full-time equivalent indicates the percentage of developer has been assigned(for example 0 if the developer is 100% free and can work full time), "level": the current level of the developer(for example Junior, Middle, Senior,...), "english": a number from 1-5 indicates the level of English of the developer }}.
-Not all fields in the JSON result are required, you just need to process the conversation and extract any fields you can from it. For example, in input1 you don't return the location field in the JSON result because it was not mentioned, the result for input1 look like this:
-{
-"status": "success",
+The final JSON result follows this format: 
+{ 
+"status":\\* "success" if can return the result, else "failed"*\\, 
+\\* if the status is failed then ignore this*\\
 "filter": {
-"skill": ["PHP"],
-"english": 5,
-"level": "Junior"
+"skill": an array of skills in string(for example PHP, Java,...), 
+"location": a string indicates the country of the developer, 
+"FTE": a number of Full-time equivalents indicates the percentage of the developer has been assigned(for example 0 if the developer is 100% free and can work full-time), 
+"level": the current level of the developer(for example Junior, Middle, Senior,...) \\* If it's Middle, you will adjust it to Mid-level *\\, 
+"english": a number from 1-5 indicates the level of English of the developer 
 }
 }
-If can't process the result, return "failed".
-
-ALL VALID SKILLS: 'Javascript', 'PHP'
-ALL VALID LOCATIONS: 'Can Tho', 'Da Nang', 'Ha Noi', 'Ho Chi Minh'
-ALL VALID LEVELS: 'Junior', 'Mid-level', 'Senior'
+Not all fields in the JSON result are required, you just need to process the conversation and extract any fields you can from it. For example, in input1 you don't return the \`location\` field in the JSON result because it was not mentioned, the result for input1 would look like this:
+{
+   "status": "success",
+   "filter": {
+   "skill": ["PHP"],
+   "english": 5,
+   "level": "Junior"
+   }
+}
+All valid values for field \`skill\`: Java, PHP, Python, JavaScript, React, C#, .NET, Ruby on Rails, PostgreSQL, MySQL, Django, Spring Boot, Vue.js, .NET Core, Android, SQLite, Flask, Angular, MongoDB, Laravel.
+All valid values for field \`location\`: Hanoi, Ho Chi Minh, Da Nang, Can Tho, and Haiphong.
+All valid values for field \`level\`:  Junior, Mid-level,  and Senior.
+If any field in the JSON result processed does not match the valid values, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that the description for that field is not valid, ask them to update it*\\ }\`
+If can't process the result, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that you can't process the requirements*\\ }\`
 `
 
 module.exports = class OpenAIService {
@@ -37,7 +48,7 @@ module.exports = class OpenAIService {
         messages.forEach(message => {
             const text = message.text.replace(/<@.*?>/g, '');
             //if message from me, ignore
-            if(message.user === 'U05LFJT7RUZ') {
+            if(message.user === 'U05LFJT7RUZ' && !message.text.includes('⚠️')) {
                 return;
             }
             if(text.trim().length >= 1) {
@@ -59,16 +70,14 @@ module.exports = class OpenAIService {
         const content = completion.data.choices[0].message.content;
         console.log(completion.data.choices[0].message)
         try {
-            const json = JSON.parse(content);
-            if(json.status === 'success') {
-                return json;
-            }
-            console.log(content)
+
+            return JSON.parse(content);
         } catch (error) {
             console.log(content);
+
+            return null;
         }
 
-        return null;
     }
 
 }
