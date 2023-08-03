@@ -26,7 +26,7 @@ class SlackAppSocketService {
             ts: message.ts
         });
         const parentThread = parentMessage.messages[0]?.thread_ts;
-        if(!parentThread) return [];
+        if(!parentThread) return [message];
         const thread = await app.client.conversations.replies({
             token: process.env.SLACK_TOKEN,
             channel: message.channel,
@@ -34,6 +34,17 @@ class SlackAppSocketService {
         });
 
         return thread.messages;
+    }
+
+    async isMessageInThread(message) {
+        const parentMessage = await app.client.conversations.replies({
+            token: process.env.SLACK_TOKEN,
+            channel: message.channel,
+            ts: message.ts
+        });
+        const parentThread = parentMessage.messages[0]?.thread_ts;
+
+        return parentThread !== undefined;
     }
 }
 
