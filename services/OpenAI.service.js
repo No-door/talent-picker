@@ -33,8 +33,7 @@ Not all fields in the JSON result are required, you just need to process the con
 }
 All valid values for field \`skill\`: Java, PHP, Python, JavaScript, React, C#, .NET, Ruby on Rails, PostgreSQL, MySQL, Django, Spring Boot, Vue.js, .NET Core, Android, SQLite, Flask, Angular, MongoDB, Laravel.
 All valid values for field \`location\`: Hanoi, Ho Chi Minh, Da Nang, Can Tho, and Haiphong.
-All valid values for field \`level\`:  Junior, Mid-level,  and Senior.
-If any field in the JSON result processed does not match the valid values, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that the description for that field is not valid, ask them to update it*\\ }\`
+All valid values for field \`level\`:  Junior, Mid-level, and Senior.
 If can't process the result, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that you can't process the requirements*\\ }\`
 `
 
@@ -48,7 +47,7 @@ module.exports = class OpenAIService {
         messages.forEach(message => {
             const text = message.text.replace(/<@.*?>/g, '');
             //if message from me, ignore
-            if(message.user === 'U05LFJT7RUZ' && !message.text.includes('⚠️')) {
+            if(message.user === 'U05LFJT7RUZ') {
                 return;
             }
             if(text.trim().length >= 1) {

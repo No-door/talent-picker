@@ -28,7 +28,7 @@ app.message(async ({message, say}) => {
             return;
         } else if (result.status === 'failed') {
             await say({
-                text: `⚠️<@${message.user}>`+result.message,
+                text: `<@${message.user}>`+result.message,
                 thread_ts: message.ts
             })
 

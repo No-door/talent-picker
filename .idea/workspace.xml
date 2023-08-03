@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="043ca699-0d83-4889-84f5-048a37b466d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/candidates.json" beforeDir="false" afterPath="$PROJECT_DIR$/candidates.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/slack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/slack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/OpenAI.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/OpenAI.service.js" afterDir="false" />
     </list>
@@ -43,12 +42,12 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "main",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <servers />
   </component>
