@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "name": "Nguyen Van B",
+      "skill": ["Java", "PHP"],
+      "location": "Hanoi",
+      "FTE": "100%",
+      "level": "Junior",
+      "english": 4
+    },
+    {
+      "name": "Tran Thi C",
+      "skill": ["Python", "JavaScript"],
+      "location": "Ho Chi Minh City",
+      "FTE": "80%",
+      "level": "Mid-level",
+      "english": 3
+    },
+    {
+      "name": "Le Hoang D",
+      "skill": ["JavaScript", "React"],
+      "location": "Da Nang",
+      "FTE": "100%",
+      "level": "Junior",
+      "english": 3
+    },
+    {
+      "name": "Pham Minh E",
+      "skill": ["C#", ".NET"],
+      "location": "Haiphong",
+      "FTE": "50%",
+      "level": "Junior",
+      "english": 2
+    },
+    {
+      "name": "Ngo Thi F",
+      "skill": ["Ruby on Rails", "PostgreSQL"],
+      "location": "Hanoi",
+      "FTE": "80%",
+      "level": "Senior",
+      "english": 5
+    }
+  ]
+}

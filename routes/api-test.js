@@ -1,5 +1,4 @@
 var express = require('express');
-const {WebClient} = require("@slack/web-api");
 var router = express.Router();
 require('dotenv').config()
 

@@ -1,13 +1,28 @@
+const {SocketModeClient, LogLevel} = require('@slack/socket-mode');
+const {WebClient} = require('@slack/web-api');
+var SlackBot = require('slackbots');
+const SlackAppSocket = require('../services/SlackAppSocket.service');
+require('dotenv').config()
+const EmployeeRepository = require('../repositories/employee.repository');
+const {App} = require("@slack/bolt");
+console.log(process.env.SLACK_TOKEN);
+const BOT_TAG_NAME = '<@U05LFJT7RUZ>';
 
-const SlackBot = require("slackbots");
+const app = SlackAppSocket.getApp();
+app.message(async ({message, say}) => {
+    if (message.text.includes(BOT_TAG_NAME)) {
 
-var bot = new SlackBot({
-    token: "xoxb-5679899181829-5685493172644-5SvnVz9n9yohqfi9eL2Vj4Ca",
-    name: 'Talent Picker'
+        const messages = await SlackAppSocket.getMessagesInThread(message);
+        console.log(messages)
+
+
+    }
 });
 
-bot.on('start', function () {
-    bot.postMessageToChannel('talent-team', 'meow!');
-});
+(async () => {
+    await app.start();
+    console.log('⚡️ Bolt app is running!');
+})();
 
-exports.bot = bot;
+
+exports.bot = app;
