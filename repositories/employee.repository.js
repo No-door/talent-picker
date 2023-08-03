@@ -2,42 +2,28 @@ const employeeJson = require('./employee.json').candidates;
 
 class EmployeeRepository {
     findAll() {
-        console.log(employeeJson)
         return employeeJson;
     }
 
     employeesToBlocks(employees) {
-        const rows = employees.map(candidate => ({
-            type: 'mrkdwn',
-            text: `*${candidate.name}*\n${candidate.level}\n${candidate.location}`,
-        }));
+        const employeeTinyBlocks = employees.map(employee => {
+            const value = `Level: ${employee.level} \n FTE: ${employee.FTE}\n...`
+            return {
+                "title" : `${employee.name}`,
+                "value" : value
+            }
+        })
 
-        return {
-            type: 'section',
-            text: {
-                type: 'mrkdwn',
-                text: 'List of Candidates for Interview',
-            },
-            accessory: {
-                type: 'table',
-                columns: [
-                    {
-                        type: 'plain_text',
-                        text: 'Name',
-                    },
-                    {
-                        type: 'plain_text',
-                        text: 'Level',
-                    },
-                    {
-                        type: 'plain_text',
-                        text: 'Localtion',
-                    },
-                ],
-                rows: rows,
-            },
-        };
+        return [{
+            "fields": employeeTinyBlocks,
+        }];
+    }
+
+    employeesToList(employees) {
+        return employees.map((employee, index) => {
+            return `• <https://google.com|${employee.name}>`
+        }).join('\n');
     }
 }
 
-module.exports = new EmployeeRepository();
+module.exports = EmployeeRepository;

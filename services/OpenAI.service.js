@@ -21,10 +21,10 @@ Not all fields in the JSON result are required, you just need to process the con
 }
 }
 If can't process the result, return "failed".
-2. The prompts that starts with \`<add>\` and ends with </add>  indicating the contents inside it is additional to the \`<input>\` tag sent before it.
-For example: <add>I want a developer located in Germany</add>
-If there is no \`<input>\` prompt before this prompt, return { "status":"failed"}
-Process this as additional information for your last response.
+
+ALL VALID SKILLS: 'Javascript', 'PHP'
+ALL VALID LOCATIONS: 'Can Tho', 'Da Nang', 'Ha Noi', 'Ho Chi Minh'
+ALL VALID LEVELS: 'Junior', 'Mid-level', 'Senior'
 `
 
 module.exports = class OpenAIService {
@@ -36,13 +36,18 @@ module.exports = class OpenAIService {
         let promptMessage = '<input> [ ';
         messages.forEach(message => {
             const text = message.text.replace(/<@.*?>/g, '');
+            //if message from me, ignore
+            if(message.user === 'U05LFJT7RUZ') {
+                return;
+            }
             if(text.trim().length >= 1) {
                 promptMessage += `"${text}",`;
             }
         });
         promptMessage += ' ] </input>';
+        console.log(promptMessage)
 
-            return promptMessage;
+        return promptMessage;
     }
 
     async createChatCompletion(prompt, withContext = true) {
@@ -52,15 +57,18 @@ module.exports = class OpenAIService {
         });
 
         const content = completion.data.choices[0].message.content;
+        console.log(completion.data.choices[0].message)
         try {
             const json = JSON.parse(content);
             if(json.status === 'success') {
                 return json;
             }
+            console.log(content)
         } catch (error) {
-            console.log(error);
+            console.log(content);
         }
 
         return null;
     }
+
 }
