@@ -57,12 +57,9 @@ class CandidateFilterService {
       //   }
       // }
 
-      searchEngine.search(query)
-        .then(result => {
-          const candidates = result.results.map(element => element._source);
-          console.log(candidates);
-          return candidates;
-        })
+      var result = await searchEngine.search(query);
+      const candidates = result.results.map(element => element._source);
+      return candidates;
     } catch (error) {
       console.error('Error querying candidates:', error);
       throw error;
