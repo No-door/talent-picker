@@ -6,6 +6,7 @@ var elasticsearch = require('elasticsearch');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiTestRouter = require('./routes/api-test');
+var candidatesRouter = require('./routes/candidates');
 var bot = require('./routes/slack').bot;
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/test', apiTestRouter)
+app.use('/candidates', candidatesRouter);
 
 
 
