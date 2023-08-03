@@ -73,3 +73,23 @@ SearchEngine.suggest = (param, index) => {
     }
   })
 }
+//create getCandidatesByIds function
+SearchEngine.getCandidatesByIds = async function (candidateIds) {
+  try {
+    const response = await client.search({
+      index: 'candidates',
+      body: {
+        query: {
+          terms: {
+            _id: candidateIds,
+          },
+        },
+      },
+    });
+
+    return response.hits.hits.map((hit) => hit._source);
+  } catch (error) {
+    console.error('Error searching candidates:', error);
+    throw error;
+  }
+}
