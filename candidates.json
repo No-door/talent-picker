@@ -1,0 +1,244 @@
+{
+    "candidates": [
+        {
+            "id": 1,
+            "name": "Nguyen Van Binh",
+            "skill": [
+                "Java",
+                "PHP"
+            ],
+            "location": "Hanoi",
+            "FTE": 100,
+            "level": "Junior",
+            "english": 4
+        },
+        {
+            "id": 2,
+            "name": "Tran Thi Cam",
+            "skill": [
+                "Python",
+                "JavaScript"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 80,
+            "level": "Mid-level",
+            "english": 3
+        },
+        {
+            "id": 3,
+            "name": "Le Hoang Dung",
+            "skill": [
+                "JavaScript",
+                "React"
+            ],
+            "location": "Da Nang",
+            "FTE": 100,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 4,
+            "name": "Pham Minh E",
+            "skill": [
+                "C#",
+                ".NET"
+            ],
+            "location": "Can Tho",
+            "FTE": 50,
+            "level": "Junior",
+            "english": 2
+        },
+        {
+            "id": 5,
+            "name": "Ngo Thi Hang",
+            "skill": [
+                "Ruby on Rails",
+                "PostgreSQL"
+            ],
+            "location": "Hanoi",
+            "FTE": 80,
+            "level": "Senior",
+            "english": 5
+        },
+        {
+            "id": 6,
+            "name": "Truong Van Hoang",
+            "skill": [
+                "PHP",
+                "MySQL"
+            ],
+            "location": "Da Nang",
+            "FTE": 100,
+            "level": "Mid-level",
+            "english": 4
+        },
+        {
+            "id": 7,
+            "name": "Dang Thi Lan",
+            "skill": [
+                "Python",
+                "Django"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 80,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 8,
+            "name": "Bui Minh Kiet",
+            "skill": [
+                "Java",
+                "Spring Boot"
+            ],
+            "location": "Hanoi",
+            "FTE": 100,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 9,
+            "name": "Hoang Thi Mai",
+            "skill": [
+                "JavaScript",
+                "Vue.js"
+            ],
+            "location": "Da Nang",
+            "FTE": 50,
+            "level": "Junior",
+            "english": 2
+        },
+        {
+            "id": 10,
+            "name": "Vo Van Nam",
+            "skill": [
+                "C#",
+                ".NET Core"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 80,
+            "level": "Mid-level",
+            "english": 4
+        },
+        {
+            "id": 11,
+            "name": "Le Thi Oanh",
+            "skill": [
+                "Ruby on Rails",
+                "SQLite"
+            ],
+            "location": "Hanoi",
+            "FTE": 100,
+            "level": "Senior",
+            "english": 5
+        },
+        {
+            "id": 12,
+            "name": "Nguyen Van Phong",
+            "skill": [
+                "Python",
+                "Flask"
+            ],
+            "location": "Haiphong",
+            "FTE": 80,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 13,
+            "name": "Tran Thi Quynh",
+            "skill": [
+                "JavaScript",
+                "Angular"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 100,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 14,
+            "name": "Do Van Long",
+            "skill": [
+                "Java",
+                "Android"
+            ],
+            "location": "Da Nang",
+            "FTE": 50,
+            "level": "Junior",
+            "english": 2
+        },
+        {
+            "id": 15,
+            "name": "Ngo Thi My",
+            "skill": [
+                "Ruby on Rails",
+                "MongoDB"
+            ],
+            "location": "Hanoi",
+            "FTE": 80,
+            "level": "Senior",
+            "english": 5
+        },
+        {
+            "id": 16,
+            "name": "Truong Van Nhan",
+            "skill": [
+                "PHP",
+                "Laravel"
+            ],
+            "location": "Da Nang",
+            "FTE": 100,
+            "level": "Mid-level",
+            "english": 4
+        },
+        {
+            "id": 17,
+            "name": "Le Thi Oai",
+            "skill": [
+                "Python",
+                "Django"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 80,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 18,
+            "name": "Nguyen Van Phuoc",
+            "skill": [
+                "Java",
+                "Spring Boot"
+            ],
+            "location": "Hanoi",
+            "FTE": 100,
+            "level": "Junior",
+            "english": 3
+        },
+        {
+            "id": 19,
+            "name": "Hoang Thi Quyen",
+            "skill": [
+                "JavaScript",
+                "React"
+            ],
+            "location": "Da Nang",
+            "FTE": 50,
+            "level": "Junior",
+            "english": 2
+        },
+        {
+            "id": 20,
+            "name": "Vo Van Quy",
+            "skill": [
+                "C#",
+                ".NET Core"
+            ],
+            "location": "Ho Chi Minh",
+            "FTE": 80,
+            "level": "Mid-level",
+            "english": 4
+        }
+    ]
+}
