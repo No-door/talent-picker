@@ -6,7 +6,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const CONTEXT = `
-        In this conversation, you're the chatbot that supports the Head of departments in hiring developers. Strictly follow this whole initial prompt.
+In this conversation, you're the chatbot that supports the Head of departments in hiring developers. Strictly follow this whole initial prompt.
 1. The prompt that starts with \`<input>\` and ends with \`</input>\` is a prompt that needs to be processed, the content inside the input tag is an array of a conversation
 For example input1: <input> ["Hello, I want to find a PHP developer with high english skills", "Hello, what level do you require for this developer?", "Junior please"]</input>
 You will process these conversations and respond to me with the final requirements result in JSON, with no additional text.
@@ -30,6 +30,19 @@ Process this as additional information for your last response.
 module.exports = class OpenAIService {
     constructor() {
         this.openai = openai;
+    }
+
+    messagesToInput(messages) {
+        let promptMessage = '<input> [ ';
+        messages.forEach(message => {
+            const text = message.text.replace(/<@.*?>/g, '');
+            if(text.trim().length >= 1) {
+                promptMessage += `"${text}",`;
+            }
+        });
+        promptMessage += ' ] </input>';
+
+            return promptMessage;
     }
 
     async createChatCompletion(prompt, withContext = true) {
