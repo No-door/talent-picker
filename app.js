@@ -5,6 +5,7 @@ var logger = require('morgan');
 var elasticsearch = require('elasticsearch');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cors = require('cors');
 var apiTestRouter = require('./routes/api-test');
 var candidatesRouter = require('./routes/candidates');
 var bot = require('./routes/slack').bot;
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors({ origin: 'http://localhost:4000' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
