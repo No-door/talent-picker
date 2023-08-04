@@ -10,7 +10,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 4
+            "english": 4,
+            "email": "nvbinh@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 2,
@@ -22,7 +24,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 3
+            "english": 3,
+            "email": "ttcam@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 3,
@@ -34,7 +38,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "lhodung@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 4,
@@ -46,7 +52,9 @@
             "location": "Can Tho",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "pme@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 5,
@@ -58,7 +66,9 @@
             "location": "Hanoi",
             "FTE": 80,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "nthang@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 6,
@@ -70,7 +80,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "tvhoang@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 7,
@@ -82,7 +94,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "dtlan@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 8,
@@ -94,7 +108,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "bmkiet@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 9,
@@ -106,7 +122,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "htmai@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 10,
@@ -118,7 +136,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "vvn@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 11,
@@ -130,7 +150,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "ltoanh@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 12,
@@ -142,7 +164,9 @@
             "location": "Haiphong",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "nvphong@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 13,
@@ -154,7 +178,9 @@
             "location": "Ho Chi Minh",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "ttquynh@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 14,
@@ -166,7 +192,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "dvl@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 15,
@@ -178,7 +206,9 @@
             "location": "Hanoi",
             "FTE": 80,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "ntmy@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 16,
@@ -190,7 +220,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "tvnhan@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 17,
@@ -202,7 +234,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "ltoai@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 18,
@@ -214,7 +248,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "nvphuoc@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 19,
@@ -226,7 +262,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "htquyen@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 20,
@@ -238,7 +276,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "vvquy@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 21,
@@ -250,7 +290,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "nvthanh@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 22,
@@ -262,7 +304,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "ttuyen@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 23,
@@ -274,7 +318,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "lhvan@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 24,
@@ -286,7 +332,9 @@
             "location": "Can Tho",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "ptxuan@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 25,
@@ -298,7 +346,9 @@
             "location": "Hanoi",
             "FTE": 80,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "nvyen@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 26,
@@ -310,7 +360,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "tvz@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 27,
@@ -322,7 +374,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "dth@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 28,
@@ -334,7 +388,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "bmk@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 29,
@@ -346,7 +402,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "htm@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 30,
@@ -358,7 +416,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "vvn@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 31,
@@ -370,7 +430,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "lto@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 32,
@@ -382,7 +444,9 @@
             "location": "Haiphong",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "nvp@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 33,
@@ -394,7 +458,9 @@
             "location": "Ho Chi Minh",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "ttq@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 34,
@@ -406,7 +472,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "dvl@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 35,
@@ -418,7 +486,9 @@
             "location": "Hanoi",
             "FTE": 80,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "ntm@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 36,
@@ -430,7 +500,9 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "tvn@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 37,
@@ -442,7 +514,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "lto@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 38,
@@ -454,7 +528,9 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "nvp@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 39,
@@ -466,7 +542,9 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "htq@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 40,
@@ -478,11 +556,13 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "vvq@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 41,
-            "name": "Nguyen Van A",
+            "name": "Nguyen Van T",
             "skill": [
                 "Java",
                 "Spring Boot"
@@ -490,11 +570,13 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "nvt@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 42,
-            "name": "Tran Thi B",
+            "name": "Tran Thi U",
             "skill": [
                 "Python",
                 "Django"
@@ -502,11 +584,13 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "ttu@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 43,
-            "name": "Le Hoang C",
+            "name": "Le Hoang V",
             "skill": [
                 "JavaScript",
                 "React"
@@ -514,11 +598,13 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "lhv@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 44,
-            "name": "Pham Thi D",
+            "name": "Pham Thi X",
             "skill": [
                 "C#",
                 ".NET Core"
@@ -526,11 +612,13 @@
             "location": "Can Tho",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "ptx@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 45,
-            "name": "Ngo Van E",
+            "name": "Ngo Van Y",
             "skill": [
                 "Ruby on Rails",
                 "PostgreSQL"
@@ -538,11 +626,13 @@
             "location": "Hanoi",
             "FTE": 80,
             "level": "Senior",
-            "english": 5
+            "english": 5,
+            "email": "nvy@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 46,
-            "name": "Truong Van F",
+            "name": "Truong Van Z",
             "skill": [
                 "PHP",
                 "MySQL"
@@ -550,11 +640,13 @@
             "location": "Da Nang",
             "FTE": 100,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "tvz@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 47,
-            "name": "Dang Thi G",
+            "name": "Dang Thi H",
             "skill": [
                 "Python",
                 "Django"
@@ -562,11 +654,13 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "dth@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 48,
-            "name": "Bui Minh H",
+            "name": "Bui Minh K",
             "skill": [
                 "Java",
                 "Spring Boot"
@@ -574,11 +668,13 @@
             "location": "Hanoi",
             "FTE": 100,
             "level": "Junior",
-            "english": 3
+            "english": 3,
+            "email": "bmk@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 49,
-            "name": "Hoang Thi I",
+            "name": "Hoang Thi M",
             "skill": [
                 "JavaScript",
                 "Vue.js"
@@ -586,11 +682,13 @@
             "location": "Da Nang",
             "FTE": 50,
             "level": "Junior",
-            "english": 2
+            "english": 2,
+            "email": "htm@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         },
         {
             "id": 50,
-            "name": "Vo Van J",
+            "name": "Vo Van N",
             "skill": [
                 "C#",
                 ".NET Core"
@@ -598,7 +696,9 @@
             "location": "Ho Chi Minh",
             "FTE": 80,
             "level": "Mid-level",
-            "english": 4
+            "english": 4,
+            "email": "vvn@nfq.com",
+            "cv": "https://drive.google.com/file/d/1u56-m6KPrP5e7VfPtksRpPQ_a4F57eDK/view?usp=drive_link"
         }
     ]
 }
