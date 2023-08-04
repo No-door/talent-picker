@@ -27,4 +27,17 @@ async function importData() {
   }
 }
 
+// Function to delete the index
+async function deleteIndex() {
+  try {
+    const response = await client.indices.delete({
+      index: indexName,
+    });
+    console.log(`Index '${indexName}' deleted:`, response);
+  } catch (error) {
+    console.error('Error deleting index:', error);
+  }
+}
+
+deleteIndex();
 importData();
