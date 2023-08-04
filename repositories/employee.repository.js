@@ -11,7 +11,7 @@ class EmployeeRepository {
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": `*<google.com|${employee.name}>*\nLevel: ${employee.level}, FTE: ${employee.FTE}`
+                    "text": `*<@${employee.email}>* <${employee.cv}|cv>\nLevel: ${employee.level}, FTE: ${employee.FTE}`
                 },
                 "accessory": {
                     "type": "button",
