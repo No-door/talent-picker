@@ -42,6 +42,16 @@ app.message(async ({message, say}) => {
         }
 
         const employees = await candidateFilterService.getCandidates(result);
+
+        if(employees.length === 0) {
+            await say({
+                text: `<@${message.user}>  There is no one match your requirements. Please try again.`,
+                thread_ts: message.ts
+            })
+
+            return;
+        }
+
         let displayMessage = `<@${message.user}>, ` + await openAIService.getSuccessMessage();
 
         await say({
@@ -104,7 +114,7 @@ app.action('choose_employee', async ({body, ack, say, action}) => {
             }
         }
     }
-    console.log(blocks)
+
     await ack();
     await app.client.chat.update({
         token: process.env.SLACK_TOKEN,

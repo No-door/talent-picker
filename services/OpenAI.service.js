@@ -15,8 +15,8 @@ The final JSON result follows this format:
 "status":\\* "success" if can return the result, else "failed"*\\, 
 \\* if the status is failed then ignore this*\\
 "filter": {
-"skill": an array of skills in string(for example PHP, Java,...), 
-"location": a string indicates the country of the developer, 
+"skill": an array of skills in string(can be Java, PHP, Python, JavaScript, React, C#, .NET, Ruby on Rails, PostgreSQL, MySQL, Django, Spring Boot, Vue.js, .NET Core, Android, SQLite, Flask, Angular, MongoDB, Laravel), 
+"location": a string indicates the country of the developer (Can be Hanoi, Ho Chi Minh, Da Nang, Can Tho, and Haiphong), 
 "FTE": a number of Full-time equivalents indicates the percentage of the developer has been assigned(for example 0 if the developer is 100% free and can work full-time), 
 "level": the current level of the developer(for example Junior, Middle, Senior,...) \\* If it's Middle, you will adjust it to Mid-level *\\, 
 "english": a number from 1-5 indicates the level of English of the developer 
@@ -31,9 +31,7 @@ Not all fields in the JSON result are required, you just need to process the con
    "level": "Junior"
    }
 }
-All valid values for field \`skill\`: Java, PHP, Python, JavaScript, React, C#, .NET, Ruby on Rails, PostgreSQL, MySQL, Django, Spring Boot, Vue.js, .NET Core, Android, SQLite, Flask, Angular, MongoDB, Laravel.
-All valid values for field \`location\`: Hanoi, Ho Chi Minh, Da Nang, Can Tho, and Haiphong.
-All valid values for field \`level\`:  Junior, Mid-level, and Senior.
+If in the conversation, you detect a dialog that wants to remove a field from the result, you can return the result with that field removed.
 If can't process the result, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that you can't process the requirements*\\ }\`
 `
 
