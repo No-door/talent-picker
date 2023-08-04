@@ -11,13 +11,8 @@ const BOT_TAG_NAME = '<@U05LFJT7RUZ>';
 
 const app = SlackAppSocket.getApp();
 const openAIService = new OpenAIService();
-async function test() {
-    const message = await openAIService.getSuccessMessage();
-    console.log(message)
-}
-test()
 app.message(async ({message, say}) => {
-    if (message.text.includes(BOT_TAG_NAME)) {
+    if (message.text && message.text.includes(BOT_TAG_NAME)) {
 
         const messages = await SlackAppSocket.getMessagesInThread(message);
         let promptMessage = openAIService.messagesToInput(messages);

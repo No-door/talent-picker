@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="043ca699-0d83-4889-84f5-048a37b466d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/employee.repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/employee.repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/slack.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/slack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/OpenAI.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/OpenAI.service.js" afterDir="false" />
     </list>
@@ -25,7 +24,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1691085524" />
+                    <option name="lastUsedInstant" value="1691125745" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/elastic-search" />

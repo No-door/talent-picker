@@ -17,8 +17,8 @@ The final JSON result follows this format:
 "filter": {
 "skill": an array of skills in string(can be Java, PHP, Python, JavaScript, React, C#, .NET, Ruby on Rails, PostgreSQL, MySQL, Django, Spring Boot, Vue.js, .NET Core, Android, SQLite, Flask, Angular, MongoDB, Laravel), 
 "location": a string indicates the country of the developer (Can be Hanoi, Ho Chi Minh, Da Nang, Can Tho, and Haiphong), 
-"FTE": a number of Full-time equivalents indicates the percentage of the developer has been assigned(for example 0 if the developer is 100% free and can work full-time), 
-"level": the current level of the developer(for example Junior, Middle, Senior,...) \\* If it's Middle, you will adjust it to Mid-level *\\, 
+"FTE": a number of Full-time equivalents indicates the percentage of the developer has been assigned, if not mentioned, you won't return this field, 
+"level": the current level of the developer(can be Junior, Mid-level, Senior,...) \\* If it's Middle, you will adjust it to Mid-level *\\, 
 "english": a number from 1-5 indicates the level of English of the developer 
 }
 }
@@ -66,7 +66,7 @@ module.exports = class OpenAIService {
 
     async createChatCompletion(prompt, withContext = true) {
         const completion = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-0613",
             messages: [{"role": "system", "content": withContext ? CONTEXT : ''}, {role: "user", content: prompt}],
         });
 
@@ -84,7 +84,7 @@ module.exports = class OpenAIService {
 
     async getSuccessMessage() {
         const message =  await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-0613",
             messages: [{"role": "system", "content": SUCCESS_MESSAGE}],
         });
 
