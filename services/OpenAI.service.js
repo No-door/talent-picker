@@ -37,6 +37,12 @@ All valid values for field \`level\`:  Junior, Mid-level, and Senior.
 If can't process the result, return \`{ "status": "failed", "message": \\* generate a message here to inform the HOD that you can't process the requirements*\\ }\`
 `
 
+const SUCCESS_MESSAGE = `
+You are a chatbot supporting the Head of departments in hiring developers. 
+You just helped them to find out a list of potential candidates.
+Now we need a message to inform user that you have done and found the list of candidates.
+Please write a message informing, around 15 words.
+`;
 module.exports = class OpenAIService {
     constructor() {
         this.openai = openai;
@@ -76,7 +82,15 @@ module.exports = class OpenAIService {
 
             return null;
         }
+    }
 
+    async getSuccessMessage() {
+        const message =  await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [{"role": "system", "content": SUCCESS_MESSAGE}],
+        });
+
+        return message.data.choices[0].message.content;
     }
 
 }

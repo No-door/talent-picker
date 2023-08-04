@@ -5,18 +5,26 @@ class EmployeeRepository {
         return employeeJson;
     }
 
-    employeesToBlocks(employees) {
-        const employeeTinyBlocks = employees.map(employee => {
-            const value = `Level: ${employee.level} \n FTE: ${employee.FTE}\n...`
+    employeesToBlockItems(employees) {
+        return employees.map((employee, index) => {
             return {
-                "title" : `${employee.name}`,
-                "value" : value
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": `*<google.com|${employee.name}>*\nLevel: ${employee.level}, FTE: ${employee.FTE}`
+                },
+                "accessory": {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "emoji": true,
+                        "text": "Choose"
+                    },
+                    "action_id": "choose_employee",
+                    "value": employee.id+"",
+                }
             }
         })
-
-        return [{
-            "fields": employeeTinyBlocks,
-        }];
     }
 
     employeesToList(employees) {

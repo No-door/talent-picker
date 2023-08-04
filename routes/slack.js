@@ -10,9 +10,15 @@ console.log(process.env.SLACK_TOKEN);
 const BOT_TAG_NAME = '<@U05LFJT7RUZ>';
 
 const app = SlackAppSocket.getApp();
+const openAIService = new OpenAIService();
+async function test() {
+    const message = await openAIService.getSuccessMessage();
+    console.log(message)
+}
+test()
 app.message(async ({message, say}) => {
     if (message.text.includes(BOT_TAG_NAME)) {
-        const openAIService = new OpenAIService();
+
         const messages = await SlackAppSocket.getMessagesInThread(message);
         let promptMessage = openAIService.messagesToInput(messages);
 
@@ -36,24 +42,40 @@ app.message(async ({message, say}) => {
         }
 
         const employees = await candidateFilterService.getCandidates(result);
-        console.log('employees',employees)
+        let displayMessage = `<@${message.user}>, ` + await openAIService.getSuccessMessage();
 
         await say({
             thread_ts: message.ts,
+            text: 'Here is the result',
             blocks: [
                 {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `Hi, <@${message.user}>, I found ${employees.length} employees match your criteria:\n\n${employeeRepository.employeesToList(employees)}`,
+                        text: displayMessage,
+                    }
+                },
+                {
+                    type: 'divider',
+                },
+                ...employeeRepository.employeesToBlockItems(employees)
+                ,
+                {
+                    type: 'divider',
+                },
+                {
+                    type: 'section',
+                    text: {
+                        type: 'mrkdwn',
+                        text: 'Next step',
                     },
                     accessory: {
                         type: 'button',
                         text: {
                             type: 'plain_text',
-                            text: 'View result in web app',
+                            text: 'Process interview',
                         },
-                        url: 'https://www.example.com',
+                        style: "primary",
                         action_id: 'button_link_clicked',
                     },
                 },
@@ -68,6 +90,29 @@ app.message(async ({message, say}) => {
             })
         }
     }
+});
+
+app.action('choose_employee', async ({body, ack, say, action}) => {
+    const id = action.value;
+    let blocks = body.message.blocks;
+    for(let i = 0; i < blocks.length; i++) {
+        if(blocks[i]?.accessory?.value == id) {
+            if(blocks[i].accessory.text.text == 'Selected') {
+                blocks[i].accessory.text.text = 'Choose'
+            }else if(blocks[i].accessory.text.text == 'Choose') {
+                blocks[i].accessory.text.text = 'Selected'
+            }
+        }
+    }
+    console.log(blocks)
+    await ack();
+    await app.client.chat.update({
+        token: process.env.SLACK_TOKEN,
+        channel: body.channel.id,
+        ts: body.message.ts,
+        blocks: blocks,
+        text: 'Here is the result',
+    })
 });
 
 (async () => {
