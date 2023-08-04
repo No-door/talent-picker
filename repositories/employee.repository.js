@@ -11,7 +11,7 @@ class EmployeeRepository {
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": `*<@${employee.email}>* <${employee.cv}|cv>\nLevel: ${employee.level}, FTE: ${employee.FTE}`
+                    "text": `<${employee.cv}|${employee.name}>\n${employee.email}\nLevel: ${employee.level}, FTE: ${employee.FTE}`
                 },
                 "accessory": {
                     "type": "button",
@@ -21,7 +21,7 @@ class EmployeeRepository {
                         "text": "Choose"
                     },
                     "action_id": "choose_employee",
-                    "value": employee.id+"",
+                    "value": employee.id + "",
                 }
             }
         })
@@ -29,7 +29,7 @@ class EmployeeRepository {
 
     employeesToList(employees) {
         return employees.map((employee, index) => {
-            return `• <https://google.com|${employee.name}>`
+            return `• <${employee.cv}|${employee.name}>`
         }).join('\n');
     }
 }
