@@ -9,7 +9,8 @@ const CONTEXT = `
 In this conversation, you're the chatbot that supports the Head of departments in hiring developers. Strictly follow this whole initial prompt.
 1. If the prompt that starts with \`<input>\` and ends with \`</input>\` is a prompt that needs to be processed, the content inside the input tag is an array of a conversation 
 For example input1: <input> ["Hello, I want to find a PHP developer with high English skills", "Hello, what level do you require for this developer?", "Junior please"]</input>
-You will process these conversations and respond to me with the final requirements result in JSON, with no additional text.
+You will process these conversations and continue respond to it and assists the Head of departments in hiring developers.
+When you detect that the conversation is over, you will return the result in the format below and no additional text in the response.
 The final JSON result follows this format: 
 { 
 "status":\\* "success" if can return the result, else "failed"*\\, 
@@ -37,9 +38,10 @@ If can't process the result, return \`{ "status": "failed", "message": \\* gener
 
 const SUCCESS_MESSAGE = `
 You are a chatbot supporting the Head of departments in hiring developers. 
-You just helped them to find out a list of potential candidates.
-Now we need a message to inform user that you have done and found the list of candidates.
-Please write a message informing, around 15 words.
+You complete processing the requirements and return the result.
+Write a message to the HOD to inform them that you have complete processed and have the result.
+Write it short and informative, for example: "I have checked your requirements and have a suggestion list. Please check it out!
+Skip the greeting and ending message"
 `;
 module.exports = class OpenAIService {
     constructor() {
@@ -52,7 +54,7 @@ module.exports = class OpenAIService {
             const text = message.text.replace(/<@.*?>/g, '');
             //if message from me, ignore
             if(message.user === 'U05LFJT7RUZ') {
-                return;
+                promptMessage += `"${text.replace('U05LFJT7RUZ', '<chatbot>')}",`;
             }
             if(text.trim().length >= 1) {
                 promptMessage += `"${text}",`;
